@@ -18,7 +18,7 @@ class Task extends PluginTask {
 
     public function onRun($currentTick){
     	$this->plugin = $this->getOwner();
-    	$this->cfg = new Config($this->plugin->getDataFolder()."rules.yml", Config::YAML);
+    	$this->cfg = new Config($this->plugin->getDataFolder()."broadcaster.yml", Config::YAML);
     	if($this->cfg["broadcast-enabled"]==true){
     		$this->length=$this->length+1;
     		$messages = $this->cfg["messages"];
