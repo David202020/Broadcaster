@@ -19,7 +19,6 @@ class Main extends PluginBase{
         $time = intval($this->cfg["time"]) * 20;
         $ptime = intval($this->cfg["popup-time"]) * 20;
         $this->task = $this->getServer()->getScheduler()->scheduleRepeatingTask(new Tasks\Task($this), $time);
-        $this->ptask = $this->getServer()->getScheduler()->scheduleRepeatingTask(new Tasks\PopupTask($this), $ptime);
     }
 
 	public function getMessagefromArray($array){
