@@ -1,14 +1,5 @@
 <?php
 
-/*
- * Broadcaster (v1.16) by EvolSoft
- * Developer: EvolSoft (Flavius12)
- * Website: http://www.evolsoft.tk
- * Date: 28/05/2015 01:31 PM (UTC)
- * Copyright & License: (C) 2014-2015 EvolSoft
- * Licensed under MIT (https://github.com/EvolSoft/Broadcaster/blob/master/LICENSE)
- */
-
 namespace Broadcaster\Tasks;
 
 use pocketmine\Server;
@@ -34,7 +25,7 @@ class Task extends PluginTask {
     		$messagekey = $this->length;
     		$message = $messages[$messagekey];
     		if($this->length==count($messages)-1) $this->length = -1;
-    		Server::getInstance()->broadcastMessage($this->plugin->translateColors("&", $this->plugin->broadcast($this->cfg, $message)));
+    		Server::getInstance()->broadcastMessage($this->plugin->broadcast($this->cfg, $message));
     	}
     }
 
