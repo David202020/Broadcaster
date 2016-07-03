@@ -4,7 +4,7 @@ namespace Broadcaster;
 use pocketmine\Player;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
-use pocketmine\utils\{Config, TextFormat};
+use pocketmine\utils\Config;
 
 class Main extends PluginBase{
 
@@ -15,9 +15,8 @@ class Main extends PluginBase{
     public function onEnable(){
         @mkdir($this->getDataFolder());
         $this->saveDefaultConfig();
-        $this->cfg = $this->getConfig()->getAll();
+        $this->cfg = new Config($this->getDataFolder()."broadcasts.yml", Config::YAML);
         $time = intval($this->cfg["time"]) * 20;
-        $ptime = intval($this->cfg["popup-time"]) * 20;
         $this->task = $this->getServer()->getScheduler()->scheduleRepeatingTask(new Tasks\Task($this), $time);
     }
 
