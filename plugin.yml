@@ -1,4 +1,4 @@
 name: Broadcaster
 main: Broadcaster\Main
 version: "2"
-api: [1.13.1, 2.0.0]
+api: [1.13.1, 2.0.0, 3.0.0-ALPHA7, 3.0.0-ALPHA8, 3.0.0-ALPHA9, 3.0.0-ALPHA10]
