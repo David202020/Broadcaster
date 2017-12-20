@@ -8,7 +8,7 @@ use pocketmine\utils\Config;
 
 class Main extends PluginBase{
 
-    const PREFIX = "&9[&eBroadcaster&9] ";
+    const PREFIX = "&7[&fSky&Lords&7] ";
     public $cfg;
     public $task;
     
